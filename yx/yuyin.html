@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>web语音播报_WAM</title>
+</head>
+<body>
+	<input type="text" id="ttsText" value="你好,我是小王同学" style="width: 40rem;height: 10rem;font-size: 3rem;" x-webkit-speech>
+	<input type="button" id="tts_btn" onclick="doTTS()" value="播放" style="width: 10rem;height: 10rem;font-size: 3rem;">
+<input type="text" x-webkit-speech x-webkit-grammar="builtin:translate" />
+</body>
+<script type="text/javascript">
+	function doTTS() { 
+    var mess = document.getElementById('ttsText').value;
+    console.log(mess);
+    var msg = new SpeechSynthesisUtterance(mess);
+    msg.volume = 100;
+    msg.rate = 1;
+    msg.pitch = 1.5;
+    console.log(msg);
+    window.speechSynthesis.speak(msg);
+
+// for(var i=0;i<10000;i++){
+//         var mess = document.getElementById('ttsText').value;
+//         var msg = new SpeechSynthesisUtterance(mess);
+//         msg.lang = 'zh';
+//         msg.voice = speechSynthesis.getVoices().filter(function(voice) {
+//         return voice.name == 'Whisper';
+//         })[0];
+//         speechSynthesis.speak(msg);
+//         }
+
+        }
+</script>
+</html>

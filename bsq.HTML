@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html >
+<head>
+<meta charset="UTF-8">
+
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>王弟儿小游戏</title>
+<meta property="og:site_name" content="CodePen">
+<meta property="og:description" content="A game made to inspire developers to use GSAP, ES6 and Flexbox">
+<link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Roboto:400,700,900'>
+<link rel="stylesheet" type="text/css" href="http://cdn.bootcss.com/font-awesome/4.6.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="bsq/style.css">
+</head>
+
+<body>
+
+<div class="splash"></div>
+<div class="container">
+
+<!-- <div class="start-game-top" style="text-align: center;font-size: 40px;position: relative;z-index: 9999">王弟儿小游戏</div> -->
+  <div class="start-game game-full-flex" id="start-game">
+<audio autoplay loop="loop" >
+	<source src="bsq/bsq.mp3" />
+</audio>
+
+    <div class="start-game-top" style="text-align: right;font-size: 40px;position: relative;z-index: 9999">王弟儿小游戏</div>
+    <div class="logo-holder">
+      <p class="logo"> <span>C</span> <span>o</span> <span>l</span> <span>o</span> <span>r</span> <span>o</span> <span>n</span> </p>
+      <a class="play-button" href="#" onclick="game.start()">开始</a>
+      <h4 class="hint">暗示: <span>红色</span> 是第一位</h4>
+    </div>
+    <div class="how-to-play">
+      <div class="section section-1">
+        <h4>弹跳球<br>
+          变色</h4>
+        <div class="content">
+          <div class="ball-demo" id="ball-demo"></div>
+        </div>
+      </div>
+      <div class="section section-2">
+        <h4>点击切换颜色<br>
+          （红，黄，紫）</h4>
+        <div class="content">
+          <div class="bar bar-1" data-index="0"></div>
+          <div class="bar bar-2"></div>
+          <div class="bar bar-3"></div>
+        </div>
+      </div>
+      <div class="section section-3">
+        <h4>请匹配<br>
+          相应的颜色</h4>
+        <div class="content">
+          <div class="ball-demo" id="ball-demo"></div>
+          <div class="bar bar-1"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="stop-game game-full-flex">
+    <div class="score-container">
+      <h1>分数</h1>
+      <div class="final-score" style="margin-top: 20px;margin-bottom: 20px"></div>
+      <!-- <div class="result"></div> -->
+      <!-- <h4>Tweet to challenge friends</h4>
+      <p> <a class="tweet" href="#" onclick="game.generateTweet()"> <i class="fa fa-twitter" aria-hidden="true"></i> Tweet </a> </p> -->
+      <div> <a class="play-again" href="#" onclick="game.start()">再玩一次</a> <a class="main-menu" href="#" onclick="game.intro()">返回</a> </div>
+    </div>
+  </div>
+  <div class="small-glows"></div>
+  <div class="glow">
+    <div class="sun"></div>
+  </div>
+  <div class="waves">
+    <div class="top_wave"></div>
+    <div class="wave1"></div>
+    <div class="wave2"></div>
+    <div class="wave3"></div>
+    <div class="wave4"></div>
+  </div>
+  <div class="mounts">
+    <div class="mount1"></div>
+    <div class="mount2"></div>
+  </div>
+  <div class="clouds"></div>
+  <div class="scene">
+    <div class="learn-to-play">请点击柱子改变对应的颜色!</div>
+    <div class="score" id="score"></div>
+    <div class="ball-holder"></div>
+    <div class="sticks" id="sticks"></div>
+  </div>
+  <div class="noise"></div>
+</div>
+<script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script> 
+<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js'></script> 
+<script src="bsq/index.js"></script>
+</body>
+</html>
